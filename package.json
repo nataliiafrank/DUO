@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nataliiafrank/DUO/issues"
   },
-  "homepage": "https://github.com/nataliiafrank/DUO#readme"
+  "homepage": "https://github.com/nataliiafrank/DUO#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
 }
