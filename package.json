@@ -4,7 +4,7 @@
   "description": "landing page ",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w --include-path ./node_modules/bemify/sass",
+    "compile:sass": "node-sass -w --include-path ./node_modules/bemify/sass ./sass/main.scss ./css/style.css",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver compile:sass"
   },
@@ -18,11 +18,10 @@
     "url": "https://github.com/nataliiafrank/DUO/issues"
   },
   "homepage": "https://github.com/nataliiafrank/DUO#readme",
-  "dependencies": {
-    "node-sass": "^4.11.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "bemify": "^0.1.2",
+    "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5"
   }
 }
