@@ -1,0 +1,8 @@
+// Media Queries Mixins
+@mixin mq($bp-val, $type: 'min') {
+	$width: map-get($bp, $bp-val);
+
+	@media only screen and (#{$type}-width: $width) {
+		@content;
+	}
+}

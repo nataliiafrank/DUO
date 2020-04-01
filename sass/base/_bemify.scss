@@ -68,6 +68,11 @@ $state-prefix: "is" !default;
 	}
 }
 
+@mixin extend($name) {
+  %#{$name} {
+    @content;
+  }
+}
 
 // ALIASES
 // =======

@@ -23,3 +23,74 @@
 	font-family: 'Futura';
 	src: url(/fonts/FuturaPTExtraBold.otf);
 }
+
+$font-body: 'Formular-Regular', Arial, Helvetica, sans-serif;
+$font-heading: 'Formular-Bold', Arial, Helvetica, sans-serif;
+
+body {
+	font-family: $font-body;
+	color: $c-cod-gray-light;
+	font-size: 1.6rem;
+	line-height: 30px;
+}
+
+.typography-body--reg {
+	font-size: 1.4rem;
+	line-height: 28px;
+}
+
+.typography-body--sm {
+	font-size: 1.4rem;
+	line-height: 28px;
+}
+
+.typography-body--lg {
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+
+.heading-style {
+	font-family: $font-heading;
+	color: $c-cod-gray;
+}
+
+.typography-heading {
+	// .typography-heading--1
+	@include modifier('1') {
+		@extend .heading-style;
+		font-size: 3rem;
+		line-height: 38px;
+
+		@include mq('md') {
+			font-size: 3.8rem;
+			line-height: 48px;
+		}
+
+		@include mq('lg') {
+			font-size: 4.8rem;
+			line-height: 58px;
+		}
+	}
+
+	// .typography-heading--2
+	@include modifier('2') {
+		@extend .heading-style;
+		font-size: 2.8rem;
+		line-height: 34px;
+
+		@include mq('md') {
+			font-size: 3.2rem;
+			line-height: 50px;
+		}
+		@include mq('lg') {
+			font-size: 3.6rem;
+		}
+	}
+
+	// .typography-heading--3
+	@include modifier('3') {
+		@extend .heading-style;
+		font-size: 2rem;
+		line-height: 30px;
+	}
+}

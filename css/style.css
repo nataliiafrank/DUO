@@ -6,6 +6,61 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   vertical-align: baseline; }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.tablet {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .tablet {
+      display: block; } }
+
+.desktop {
+  display: none; }
+  @media only screen and (min-width: 1024px) {
+    .desktop {
+      display: block; } }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
+img {
+  border-style: none;
+  display: block; }
+
+input,
+button,
+select,
+optgroup,
+textarea,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+button,
+select {
+  text-transform: none; }
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 @font-face {
   font-family: 'Formular-Regular';
   src: url(/fonts/Formular-Regular.otf); }
@@ -29,3 +84,84 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 @font-face {
   font-family: 'Futura';
   src: url(/fonts/FuturaPTExtraBold.otf); }
+
+body {
+  font-family: "Formular-Regular", Arial, Helvetica, sans-serif;
+  color: #6D6C6C;
+  font-size: 1.6rem;
+  line-height: 30px; }
+
+.typography-body--reg {
+  font-size: 1.4rem;
+  line-height: 28px; }
+
+.typography-body--sm {
+  font-size: 1.4rem;
+  line-height: 28px; }
+
+.typography-body--lg {
+  font-size: 1.8rem;
+  line-height: 24px; }
+
+.heading-style, .typography-heading--1, .typography-heading--2, .typography-heading--3 {
+  font-family: "Formular-Bold", Arial, Helvetica, sans-serif;
+  color: #0c0a09; }
+
+.typography-heading--1 {
+  font-size: 3rem;
+  line-height: 38px; }
+  @media only screen and (min-width: 768px) {
+    .typography-heading--1 {
+      font-size: 3.8rem;
+      line-height: 48px; } }
+  @media only screen and (min-width: 1024px) {
+    .typography-heading--1 {
+      font-size: 4.8rem;
+      line-height: 58px; } }
+
+.typography-heading--2 {
+  font-size: 2.8rem;
+  line-height: 34px; }
+  @media only screen and (min-width: 768px) {
+    .typography-heading--2 {
+      font-size: 3.2rem;
+      line-height: 50px; } }
+  @media only screen and (min-width: 1024px) {
+    .typography-heading--2 {
+      font-size: 3.6rem; } }
+
+.typography-heading--3 {
+  font-size: 2rem;
+  line-height: 30px; }
+
+.u-bg-grey {
+  background-color: #f8f8f8; }
+
+.u-bg-red {
+  background-color: #ff5735; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media only screen and (min-width: 768px) {
+    .container {
+      padding-left: 35px;
+      padding-right: 35px; } }
+  @media only screen and (min-width: 1024px) {
+    .container {
+      padding-left: 100px;
+      padding-right: 100px; } }
+  .container--wide {
+    max-width: 100%; }
+
+@media only screen and (min-width: 1024px) {
+  .row {
+    display: flex;
+    flex-flow: row nowrap; } }
+
+@media only screen and (min-width: 1024px) {
+  .col {
+    flex: 0 0 50%;
+    width: 50%; } }
