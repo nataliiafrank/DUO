@@ -1,0 +1,10 @@
+.button {
+	@extend .typography-body--sm;
+	color: $c-white;
+	padding: 15px 38px;
+	background-color: $c-duo-orange;
+}
+
+.link {
+	@extend .typography-body--sm;
+}

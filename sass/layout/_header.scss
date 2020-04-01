@@ -1,0 +1,58 @@
+// .header
+@include block('header') {
+
+	//.header__container
+	@include element('container') {
+		align-items: center;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding-top: 15px;
+	}
+
+	// .header__logo
+	@include element('logo') {
+		height: 46px;
+		overflow: hidden;
+		width: 84px;
+	}
+
+	// .header__logo-img
+	@include element('logo-img') {
+		height: 46px;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	// .header__nav
+	@include element('nav') {
+	}
+
+	//. header__items
+	@include element('items'){
+
+	}
+
+	//. header__item
+	@include element('item'){
+		display: inline-block;
+
+		&.tablet {
+			display: none;
+
+			@include mq('md') {
+				display: inline-block;
+			}
+		}
+
+		&:not(:last-child) {
+			padding-right: 60px;
+		}
+	}
+
+	//. header__link
+	@include element('link') {
+		display: inline-block;
+		line-height: 1;
+	}
+}
