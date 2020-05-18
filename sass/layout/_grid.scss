@@ -1,24 +1,14 @@
+// container 
 .container {
 	margin: 0 auto;
 	max-width: $max-site-width;
-	padding-left: 15px;
-	padding-right: 15px;
-
-	@include mq('md') {
-		padding-left: 35px;
-		padding-right: 35px;
-	}
-
-	@include mq('lg') {
-		padding-left: 100px;
-		padding-right: 100px;
-	}
 
 	@include modifier('wide') {
 		max-width: 100%;
 	}
 }
 
+// two colomn layout
 .row {
 	@include mq('lg') {
 		display: flex;
@@ -27,8 +17,31 @@
 }
 
 .col {
-	@include mq('lg') {
-		flex: 0 0 50%;
-		width: 50%;
+	// .col--left
+	@include modifier('left') {
+		@include mq('lg') {
+			flex: 0 0 auto;
+			width: calc(714 / 1400 * 100%);
+		}
 	}
+
+	// .col-right
+	@include modifier('right') {
+		@include mq('lg') {
+			flex: 0 0 auto;
+			width: calc(686 / 1400 * 100%);
+		}
+	}
+}
+
+.u-padding-both {
+	@extend %padding-both;
+}
+
+.u-padding-left {
+	@extend %padding-left;
+}
+
+.u-padding-right {
+ @extend %padding-right;
 }

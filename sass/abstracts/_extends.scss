@@ -1,0 +1,63 @@
+// %padding-both
+@include extend('padding-both') {
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@include mq('md') {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+
+	@include mq('lg') {
+		padding-left: calc(100 / 1400 * 100%);
+		padding-right: calc(100 / 1400 * 100%);
+	}
+
+	@include mq('xxl') {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+
+// %padding-left
+@include extend('padding-left') {
+	padding-left: 15px;
+
+	@include mq('md') {
+		padding-left: 35px;
+	}
+
+	@include mq('lg') {
+		padding-left: calc(100 / 1400 * 100%);
+	}
+
+	@include mq('xxl') {
+		padding-left: 100px;
+	}
+}
+
+// %padding-right
+@include extend('padding-right') {
+	padding-right: 15px;
+
+	@include mq('md') {
+		padding-right: 35px;
+	}
+
+	@include mq('lg') {
+		padding-right: calc(100 / 1400 * 100%);
+	}
+
+	@include mq('xxl') {
+		padding-right: 100px;
+	}
+}
+
+//Background
+@include extend('bg-grey') {
+	background-color: $c-alabaster;
+}
+
+@include extend('bg-red') {
+	background-color: $c-duo-orange;
+}

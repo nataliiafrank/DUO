@@ -6,3 +6,8 @@
 		@content;
 	}
 }
+
+// Responsive image ratio
+@mixin responsive-img($width, $height) {
+	padding-top: $height / $width * 100%;
+}

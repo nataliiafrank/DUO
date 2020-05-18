@@ -1,6 +1,6 @@
 .u-bg-grey {
-	background-color: $c-alabaster;
+	@extend %bg-grey;
 }
 .u-bg-red {
-	background-color: $c-duo-orange;
+	@extend %bg-red;
 }
