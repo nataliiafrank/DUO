@@ -11,3 +11,11 @@
 @mixin responsive-img($width, $height) {
 	padding-top: $height / $width * 100%;
 }
+
+@mixin pseudo($content: '', $z: -1) {
+	content: $content;
+	display: block;
+	position: absolute;
+	pointer-events: none;
+	$z-index: $z;
+}
