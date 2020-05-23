@@ -3,45 +3,22 @@
 
 	// .banner-split__container
 	@include element('container') {
-		@include mq('lg') {
-			align-items: flex-end;
-		}
 	}
 
 	// .banner-split__column
 	@include element('column') {
 		// .banner-split__column--left
 		@include modifier('left') {
-			@include mq('lg') {
-
-				padding-left: calc(105 / 1400 * 100%);
-			}
 		}
 
 		// .banner-split__column--right
 		@include modifier('right') {
-			@extend %bg-grey;
-			@extend %padding-both;
-			padding-bottom: 60px;
-			padding-top: 40px;
-
-			@include mq('md') {
-				padding-top: 52px;
-			}
-
-			@include mq('lg') {
-				padding-top: 188px;
-			}
 		}
 	}
 
 	// .banner-split__heading
 	@include element('heading') {
 		@extend .typography-heading--2;
-
-		@include mq('md') {
-			text-align: center;
-		}
 	}
 
 	// .banner-split__list
@@ -97,6 +74,101 @@
 		// .bunner-split__body__copy
 		@include child('copy') {
 			padding-top: 25px;
+
+			@include mq('md') {
+				max-width: calc(669 / 698 * 100%);
+			}
+
+			@include mq('lg') {
+				max-width: 422px;
+			}
+		}
+	}
+
+	// .bunner-split__features
+	@include element('features') {
+		@extend %padding-both;
+
+		@include mq('md') {
+			padding-top: 120px;
+		}
+
+		@include mq('lg') {
+			padding-top: 175px;
+		}
+	}
+}
+
+// MODIFIERS
+// .banner-split--list
+@include block('banner-split') {
+	@include modifier('list') {
+		.banner-split {
+			&__container {
+				@include mq('lg') {
+					align-items: flex-end;
+				}
+			}
+			&__column {
+				&--left {
+					@extend %padding-left;
+				}
+				&--right {
+					@extend %bg-grey;
+					@extend %padding-both;
+					padding-bottom: 60px;
+					padding-top: 40px;
+		
+					@include mq('md') {
+						padding-top: 52px;
+					}
+		
+					@include mq('lg') {
+						padding-top: 188px;
+					}
+				}
+			}
+			&__heading {
+				@include mq('md') {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+// .banner-split--features
+@include block('banner-split') {
+	@include modifier('features') {
+		.banner-split {
+			&__column {
+				&--left {
+					@extend %padding-both;
+					padding-top: 103px;
+
+					@include mq('md') {
+						padding-top: 50px;
+					}
+
+					@include mq('lg') {
+						background-color: $c-alabaster;
+						padding-top: 165px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// .banner-split--video
+@include block('banner-split') {
+	@include modifier('video') {
+		.banner-split {
+			&__container {
+				@include mq('lg') {
+					align-items: flex-start;
+				}
+			}
 		}
 	}
 }
