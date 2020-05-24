@@ -2,6 +2,10 @@
 @mixin mq($bp-val, $type: 'min') {
 	$width: map-get($bp, $bp-val);
 
+	@if $type == 'max' {
+		$width: $width - 1;
+	}
+
 	@media only screen and (#{$type}-width: $width) {
 		@content;
 	}

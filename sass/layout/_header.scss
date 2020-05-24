@@ -8,6 +8,10 @@
 		flex-flow: row nowrap;
 		justify-content: space-between;
 		padding-top: 15px;
+
+		@include mq('md') {
+			padding-top: 28px;
+		}
 	}
 
 	// .header__logo

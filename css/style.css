@@ -1,16 +1,16 @@
-.u-padding-both, .banner-split__features, .banner-split--list .banner-split__column--right, .banner-split--features .banner-split__column--left {
+.u-padding-both, .banner-split--list .banner-split__column--right, .banner-split--features .banner-split__column--left, .banner-split--video .banner-split__column--left {
   padding-left: 15px;
   padding-right: 15px; }
   @media only screen and (min-width: 768px) {
-    .u-padding-both, .banner-split__features, .banner-split--list .banner-split__column--right, .banner-split--features .banner-split__column--left {
+    .u-padding-both, .banner-split--list .banner-split__column--right, .banner-split--features .banner-split__column--left, .banner-split--video .banner-split__column--left {
       padding-left: 35px;
       padding-right: 35px; } }
   @media only screen and (min-width: 1024px) {
-    .u-padding-both, .banner-split__features, .banner-split--list .banner-split__column--right, .banner-split--features .banner-split__column--left {
+    .u-padding-both, .banner-split--list .banner-split__column--right, .banner-split--features .banner-split__column--left, .banner-split--video .banner-split__column--left {
       padding-left: calc(100 / 1400 * 100%);
       padding-right: calc(100 / 1400 * 100%); } }
   @media only screen and (min-width: 1400px) {
-    .u-padding-both, .banner-split__features, .banner-split--list .banner-split__column--right, .banner-split--features .banner-split__column--left {
+    .u-padding-both, .banner-split--list .banner-split__column--right, .banner-split--features .banner-split__column--left, .banner-split--video .banner-split__column--left {
       padding-left: 100px;
       padding-right: 100px; } }
 
@@ -225,6 +225,9 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   padding-top: 15px; }
+  @media only screen and (min-width: 768px) {
+    .header__container {
+      padding-top: 28px; } }
 
 .header__logo {
   height: 46px;
@@ -272,10 +275,6 @@ body {
     top: 0;
     width: 8px; }
 
-@media only screen and (min-width: 1024px) {
-  .banner-split__img-wrap {
-    padding-top: 66.22951%; } }
-
 .banner-split__body__copy {
   padding-top: 25px; }
   @media only screen and (min-width: 768px) {
@@ -285,13 +284,23 @@ body {
     .banner-split__body__copy {
       max-width: 422px; } }
 
-@media only screen and (min-width: 768px) {
-  .banner-split__features {
-    padding-top: 120px; } }
-
-@media only screen and (min-width: 1024px) {
-  .banner-split__features {
-    padding-top: 175px; } }
+.banner-split__features {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 105px; }
+  @media only screen and (min-width: 768px) {
+    .banner-split__features {
+      padding-top: 120px; } }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .banner-split__features {
+      padding-left: calc((100vw - 488px) / 2);
+      padding-right: calc((100vw - 488px) / 2); } }
+  @media only screen and (min-width: 1024px) {
+    .banner-split__features {
+      padding-bottom: 165px;
+      padding-top: 175px;
+      padding-left: calc(100 / 686 * 100%);
+      padding-right: calc(100 / 686 * 100%); } }
 
 @media only screen and (min-width: 1024px) {
   .banner-split--list .banner-split__container {
@@ -305,11 +314,16 @@ body {
       padding-top: 52px; } }
   @media only screen and (min-width: 1024px) {
     .banner-split--list .banner-split__column--right {
+      padding-bottom: 113px;
       padding-top: 188px; } }
 
 @media only screen and (min-width: 768px) {
   .banner-split--list .banner-split__heading {
     text-align: center; } }
+
+@media only screen and (min-width: 1024px) {
+  .banner-split--list .banner-split__image-wrap {
+    padding-top: 66.22951%; } }
 
 .banner-split--features .banner-split__column--left {
   padding-top: 103px; }
@@ -325,6 +339,24 @@ body {
   .banner-split--video .banner-split__container {
     align-items: flex-start; } }
 
+.banner-split--video .banner-split__column--left {
+  padding-top: 40px; }
+  @media only screen and (min-width: 768px) {
+    .banner-split--video .banner-split__column--left {
+      padding-top: 64px; } }
+  @media only screen and (min-width: 1024px) {
+    .banner-split--video .banner-split__column--left {
+      padding-top: 140px; } }
+
+.banner-split--video .banner-split__image-wrap {
+  padding-top: 70.3125%; }
+  @media only screen and (min-width: 768px) {
+    .banner-split--video .banner-split__image-wrap {
+      padding-top: 70.22654%; } }
+  @media only screen and (min-width: 1024px) {
+    .banner-split--video .banner-split__image-wrap {
+      padding-top: 70.26239%; } }
+
 @media only screen and (min-width: 768px) {
   .features__container {
     display: flex;
@@ -332,9 +364,22 @@ body {
 
 .features__left {
   padding-top: 40px; }
+  @media only screen and (min-width: 768px) {
+    .features__left {
+      flex: 1 1 auto;
+      padding-right: 63px;
+      padding-top: 0; } }
 
 .features__right {
   position: relative; }
+  @media only screen and (min-width: 768px) {
+    .features__right {
+      flex: 0 0 auto;
+      max-width: 154px; } }
+
+@media only screen and (min-width: 768px) {
+  .features__heading {
+    padding-right: 20px; } }
 
 .features__copy {
   padding-top: 25px; }
@@ -347,31 +392,43 @@ body {
       margin: 0; } }
 
 .features__buttons {
+  -ms-overflow-style: none;
   margin-top: 40px;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap; }
   @media only screen and (min-width: 768px) {
     .features__buttons {
+      display: flex;
+      flex-flow: row wrap;
+      margin-top: 0;
       overflow: auto;
       white-space: unset; } }
+  .features__buttons::-webkit-scrollbar {
+    background-color: transparent;
+    display: none; }
 
 .features__button {
-  background: #f8f8f8;
+  background: #f3f3f3;
   display: inline-block;
   height: 73px;
-  margin-right: 5px;
+  margin-right: 2px;
   width: 73px; }
-  .features__button:first-child {
-    margin-left: 15px; }
-  .features__button:last-child {
-    margin-right: 15px; }
+  @media only screen and (max-width: 767px) {
+    .features__button:first-child {
+      margin-left: 15px; }
+    .features__button:last-child {
+      margin-right: 15px; } }
+  @media only screen and (min-width: 768px) {
+    .features__button {
+      margin: 2px; } }
   .features__button.is-active {
     background: #ff5735; }
 
 .features__icon {
-  max-width: 100%;
-  max-height: 100%; }
+  fill: #fff;
+  max-height: 36px;
+  max-width: 36px; }
 
 .hero__container {
   padding-top: 40px; }
