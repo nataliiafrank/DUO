@@ -19,6 +19,8 @@
 .col {
 	// .col--left
 	@include modifier('left') {
+		position: relative;
+
 		@include mq('lg') {
 			flex: 0 0 auto;
 			width: calc(714 / 1400 * 100%);
@@ -27,6 +29,8 @@
 
 	// .col-right
 	@include modifier('right') {
+		position: relative;
+
 		@include mq('lg') {
 			flex: 0 0 auto;
 			width: calc(686 / 1400 * 100%);
