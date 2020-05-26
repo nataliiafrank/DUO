@@ -1,0 +1,98 @@
+// .carousel
+@include block('carousel') {
+	// .carousel__container
+	@include element('container'){
+	}
+
+	// .carousel__intro
+	@include element('intro'){
+		@extend %bg-grey;
+		@extend %padding-left;
+		padding-bottom: 170px;
+		padding-right: 20px;
+		padding-top: 40px;
+
+		@include mq('md') {
+			padding-bottom: 345px;
+			padding-right: 65px;
+			padding-top: 80px;
+		}
+
+		@include mq('lg') {
+			padding-bottom: 190px;
+			padding-top: 129px;
+			padding-right: calc(112 / 1400 * 100%);
+		}
+	}
+
+	// .carousel__heading
+	@include element('heading'){
+		@extend .typography-heading--2;
+
+		@include mq('lg') {
+			padding-right: calc(106 / 1188 * 100%);
+		}
+	}
+
+	// .carousel__copy
+	@include element('copy'){
+		padding-top: 24px;
+
+		@include mq('lg') {
+			padding-left: calc(100 / 1188 * 100%);
+		}
+	}
+
+	// .carousel__slider
+	@include element('slider'){
+
+		// .carousel__slider__items
+		@include child('items') {
+		}
+
+		// .carousel__slider__item
+		@include child('item') {
+
+		}
+
+		// .carousel__slider__image-wrap
+		@include child('image-wrap') {
+			// &:nth-child(3n + 1) {
+			// 	@include responsive-img(293, 194);
+
+			// 	@include mq('md') {
+			// 		@include responsive-img(553, 366);
+			// 	}
+			// }
+
+			// &:nth-child(3n + 2) {
+			// 	@include responsive-img(254, 169);
+
+			// 	@include mq('md') {
+			// 		@include responsive-img(440, 293);
+			// 	}
+			// }
+
+			// &:nth-child(3n + 3) {
+			// 	@include responsive-img(308, 206);
+
+			// 	@include mq('md') {
+			// 		@include responsive-img(574, 383);
+			// 	}
+			// }
+		}
+
+		// .carousel__slider__image
+		@include child('image') {
+			max-width: 100%;
+		}
+
+		// .carousel__slider__nav
+		@include child('nav') {
+		}
+
+		// .carousel__slider__button
+		@include child('button') {
+		}
+	}
+}

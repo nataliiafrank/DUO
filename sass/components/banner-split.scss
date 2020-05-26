@@ -263,10 +263,12 @@
 					padding-top: 40px;
 
 					@include mq('md') {
+						padding-bottom: 115px;
 						padding-top: 64px;
 					}
 
 					@include mq('lg') {
+						padding-bottom: 0;
 						padding-top: 140px;
 					}
 				}
@@ -276,6 +278,10 @@
 						@include mq('lg', $type: 'max') {
 							padding-left: calc(150 / 768 * 100%);
 						}
+					}
+
+					@include mq('lg') {
+						padding-bottom: 175px;
 					}
 				}
 			}

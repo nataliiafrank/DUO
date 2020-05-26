@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>DUO: Turntable with a Detachable Bluetooth Speaker</title>
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./sass/main.scss">
 </head>
 
 <body>
@@ -312,31 +312,41 @@
 			<div class="carousel">
 				<div class="carousel__container container">
 
-					<div class="carousel__intro">
-						<p class="carousel__heading">Stylish device that doesn’t take many space</p>
-						<p class="carousel__copy">DUO’s compact 3.2” (80 mm) diameter platter is only 1/4 the size of a standard turntable. Its deceleration belt design and unique rotational stabilization help minimize vibrations on the record.</p>
+					<div class="carousel__intro row">
+						<p class="carousel__heading col--right">Stylish device that doesn’t take many space</p>
+						<p class="carousel__copy col--left">DUO’s compact 3.2” (80 mm) diameter platter is only 1/4 the size of a standard turntable. Its deceleration belt design and unique rotational stabilization help minimize vibrations on the record.</p>
 					</div>
 
 					<div class="carousel__slider">
 
-						<div class="carousel__slider__items">
-							<div class="carousel__slider__item">
-								<img class="carousel__slider__image" src="./img/duo-slider-1.jpg" alt="DUO-1">
+						<div class="courusel__slider__track">
+
+							<div class="carousel__slider__items">
+								<div class="carousel__slider__item">
+									<div class="carousel__slider__image-wrap">
+										<img class="carousel__slider__image" src="./img/duo-slider-1.jpg" alt="DUO-1">
+									</div>
+								</div>
+
+								<div class="carousel__slider__item">
+									<div class="carousel__slider__image-wrap">
+										<img class="carousel__slider__image" src="./img/duo-slider-2.jpg" alt="DUO-2">
+									</div>
+								</div>
+
+								<div class="carousel__slider__item">
+									<div class="carousel__slider__image-wrap">
+										<img class="carousel__slider__image" src="./img/duo-slider-3.jpg" alt="DUO-3">
+									</div>
+								</div>
 							</div>
 
-							<div class="carousel__slider__item">
-								<img class="carousel__slider__image" src="./img/duo-slider-2.jpg" alt="DUO-2">
-							</div>
-
-							<div class="carousel__slider__item">
-								<img class="carousel__slider__image" src="./img/duo-slider-3.jpg" alt="DUO-3">
-							</div>
 						</div>
 
-						<div class="carousel__slider__nav">
-							<button class="carousel__slider__button carousel__slider__button--prev"></button>
-							<button class="carousel__slider__button carousel__slider__button--next"></button>
-						</div>
+							<div class="carousel__slider__nav">
+								<button class="carousel__slider__button carousel__slider__button--prev"></button>
+								<button class="carousel__slider__button carousel__slider__button--next"></button>
+							</div>
 
 					</div>
 				</div>
@@ -372,7 +382,6 @@
 
 		</div>
 	</footer> -->
-
 	<script src="/js/app.js"></script>
 </body>
 
