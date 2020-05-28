@@ -54,8 +54,8 @@
     border-bottom: 8px solid transparent;
     margin-left: -3px;
     left: 50%;
-    top: 50%;
-		position: relative;
+		top: 50%;
+		transform: translate(0, -50%);
 		height: 0;
 		width: 0;
 	}

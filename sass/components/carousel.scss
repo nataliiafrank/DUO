@@ -44,7 +44,16 @@
 	}
 
 	// .carousel__slider
-	@include element('slider'){
+	@include element('slider') {
+		margin-top: -86px;
+
+		@include mq('md') {
+			margin-top: -260px;
+		}
+
+		@include mq('lg') {
+			margin-top: -92px;
+		}
 
 		// .carousel__slider__items
 		@include child('items') {
@@ -52,47 +61,116 @@
 
 		// .carousel__slider__item
 		@include child('item') {
+			&:nth-child(3n + 1) {
+				width: 293px;
 
-		}
+				@include mq('md') {
+					width: 553px;
+				}
+			}
 
-		// .carousel__slider__image-wrap
-		@include child('image-wrap') {
-			// &:nth-child(3n + 1) {
-			// 	@include responsive-img(293, 194);
+			&:nth-child(3n + 2) {
+				// @include responsive-img(254, 169);
+				width: 254px;
 
-			// 	@include mq('md') {
-			// 		@include responsive-img(553, 366);
-			// 	}
-			// }
+				@include mq('md') {
+					// @include responsive-img(440, 293);
+					width: 440px;
+				}
+			}
 
-			// &:nth-child(3n + 2) {
-			// 	@include responsive-img(254, 169);
+			&:nth-child(3n + 3) {
+				// @include responsive-img(308, 206);
+				width: 308px;
 
-			// 	@include mq('md') {
-			// 		@include responsive-img(440, 293);
-			// 	}
-			// }
-
-			// &:nth-child(3n + 3) {
-			// 	@include responsive-img(308, 206);
-
-			// 	@include mq('md') {
-			// 		@include responsive-img(574, 383);
-			// 	}
-			// }
+				@include mq('md') {
+					// @include responsive-img(574, 383);
+					width: 574px;
+				}
+			}
 		}
 
 		// .carousel__slider__image
 		@include child('image') {
+			min-width: 100%;
 			max-width: 100%;
 		}
 
 		// .carousel__slider__nav
 		@include child('nav') {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			margin-left: auto;
+			margin-right: 15px;
+			margin-top: 40px;
+			position: relative;
+			width: 178px;
+			z-index: 2;
+
+			@include mq('md') {
+				margin-top: 70px;
+				margin-right: 80px;
+			}
+
+			@include mq('md') {
+				margin-top: 76px;
+				margin-right: auto;
+				margin-left: calc(100 / 1400 * 100%);
+			}
 		}
 
 		// .carousel__slider__button
 		@include child('button') {
+			border: 1px solid $c-duo-orange;
+			position: static;
+			height: 36px;
+			display: inline-block;
+			margin-top: 0;
+
+			// .carousel__slider__button--prev
+			@include modifier('prev') {
+				width: 52px;
+			}
+
+			// .carousel__slider__button--next
+			@include modifier('next') {
+				background-color: $c-duo-orange;
+				width: 106px;
+			}
+
+			&:focus {
+				outline-color: $c-white;
+			}
 		}
+
+		// .carousel__slider__arrow-left
+		@include child('arrow-left') {
+			fill: $c-duo-orange;
+			height: 12px;
+			width: 22px;
+		}
+
+		// .carousel__slider__arrow-right
+		@include child('arrow-right') {
+			fill: $c-white;
+			height: 12px;
+			width: 42px;
+		}
+	}
+}
+
+// Swiper overrides
+.swiper-button-prev {
+	&::after {
+		content: '';
+		display: none;
+	}
+}
+
+.swiper-button-next {
+	&::after {
+		content: '';
+		display: none;
 	}
 }

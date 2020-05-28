@@ -17,8 +17,11 @@
     "url": "https://github.com/nataliiafrank/DUO/issues"
   },
   "homepage": "https://github.com/nataliiafrank/DUO#readme",
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^5.4.1"
+  },
   "devDependencies": {
+    "autoprefixer": "^9.8.0",
     "bemify": "^0.1.2",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.5"

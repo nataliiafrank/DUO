@@ -138,7 +138,7 @@
 			<div class="hero">
 				<div class="hero__container container row">
 					<div class="hero__column hero__column--left col--left">
-						<h1 class="hero__heading typography-heading--1">Turntabl with a Detachable Bluetooth Speaker</h1>
+						<h1 class="hero__heading typography-heading--1">Turntable with a Detachable Bluetooth Speaker</h1>
 						<p class="hero__copy">This is DUO, offering vinyl, Bluetooth, and smart capabilities in one ultra-compact, intuitive setup.</p>
 
 						<div class="hero__link">
@@ -251,7 +251,7 @@
 												</button>
 	
 												<button class="features__button js-features-button" data-feature='stereo'>
-													<svg class="features__icon features__icon--stereo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+													<svg class="features__icon features__icon--alexa" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 														<use xlink:href="#icon-stereo"></use>
 													</svg>
 												</button>
@@ -319,22 +319,22 @@
 
 					<div class="carousel__slider">
 
-						<div class="courusel__slider__track">
+						<div class="courusel__slider__track swiper-container">
 
-							<div class="carousel__slider__items">
-								<div class="carousel__slider__item">
+							<div class="carousel__slider__items swiper-wrapper">
+								<div class="carousel__slider__item swiper-slide">
 									<div class="carousel__slider__image-wrap">
 										<img class="carousel__slider__image" src="./img/duo-slider-1.jpg" alt="DUO-1">
 									</div>
 								</div>
 
-								<div class="carousel__slider__item">
+								<div class="carousel__slider__item swiper-slide">
 									<div class="carousel__slider__image-wrap">
 										<img class="carousel__slider__image" src="./img/duo-slider-2.jpg" alt="DUO-2">
 									</div>
 								</div>
 
-								<div class="carousel__slider__item">
+								<div class="carousel__slider__item swiper-slide">
 									<div class="carousel__slider__image-wrap">
 										<img class="carousel__slider__image" src="./img/duo-slider-3.jpg" alt="DUO-3">
 									</div>
@@ -344,8 +344,16 @@
 						</div>
 
 							<div class="carousel__slider__nav">
-								<button class="carousel__slider__button carousel__slider__button--prev"></button>
-								<button class="carousel__slider__button carousel__slider__button--next"></button>
+								<button class="carousel__slider__button carousel__slider__button--prev swiper-button-prev">
+									<svg class="carousel__slider__arrow-left" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<use xlink:href="#icon-arrow-left"></use>
+									</svg>
+								</button>
+								<button class="carousel__slider__button carousel__slider__button--next swiper-button-next">
+									<svg class="carousel__slider__arrow-right" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<use xlink:href="#icon-arrow-right"></use>
+									</svg>
+								</button>
 							</div>
 
 					</div>
@@ -358,11 +366,15 @@
 		<section class="subscription"></section>
 	</main>
 
-	<!-- <footer class="footer">
+	<footer class="footer">
 		<div class="footer__container container">
 
 			<div class="footer__logo">
-				Duo
+				<a href="#">
+					<svg class="footer__logo-img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<use xlink:href="#icon-duo" fill="#0c0a09"></use>
+					</svg>
+				</a>
 			</div>
 
 			<nav class="footer__nav">
@@ -381,7 +393,7 @@
 			</nav>
 
 		</div>
-	</footer> -->
+	</footer>
 	<script src="/js/app.js"></script>
 </body>
 
