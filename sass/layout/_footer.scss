@@ -1,0 +1,48 @@
+// .footer
+@include block('footer') {
+	@extend %bg-grey;
+
+	// .footer__container
+	@include element('container') {
+		padding: 40px 0 60px;
+	}
+
+	// .footer__logo
+	@include element('logo') {
+		height: 46px;
+		overflow: hidden;
+		margin: 0 auto;
+		width: 79px;
+	}
+
+	// .footer__logo-img
+	@include element('logo-img') {
+		height: 46px;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	// .footer__nav
+	@include element('nav') {
+	}
+
+	//. footer__items
+	@include element('items') {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	//. footer__item
+	@include element('item') {
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		padding-top: 36px;
+		flex: 0 0 100%;
+	}
+
+	//. footer__link
+	@include element('link') {
+		text-align: center;
+	}
+}

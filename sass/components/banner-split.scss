@@ -260,6 +260,7 @@
 			&__column {
 				&--left {
 					@extend %padding-both;
+					padding-bottom: 105px;
 					padding-top: 40px;
 
 					@include mq('md') {

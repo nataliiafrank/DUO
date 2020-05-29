@@ -16,10 +16,12 @@
 @import "layout/header";
 @import "layout/navigation";
 
+@import "generic";
+
 @import "components/banner-split";
 @import "components/carousel";
 @import "components/features";
 @import "components/hero";
+@import "components/testimonial-slider";
 
 @import "pages/home";
-@import "generic";

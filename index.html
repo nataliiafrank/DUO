@@ -319,7 +319,7 @@
 
 					<div class="carousel__slider">
 
-						<div class="courusel__slider__track swiper-container">
+						<div class="carousel__slider__track js-gallery-slider swiper-container">
 
 							<div class="carousel__slider__items swiper-wrapper">
 								<div class="carousel__slider__item swiper-slide">
@@ -344,12 +344,12 @@
 						</div>
 
 							<div class="carousel__slider__nav">
-								<button class="carousel__slider__button carousel__slider__button--prev swiper-button-prev">
+								<button class="carousel__slider__button carousel__slider__button--prev js-gallery-slider-prev swiper-button-prev">
 									<svg class="carousel__slider__arrow-left" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 										<use xlink:href="#icon-arrow-left"></use>
 									</svg>
 								</button>
-								<button class="carousel__slider__button carousel__slider__button--next swiper-button-next">
+								<button class="carousel__slider__button carousel__slider__button--next js-gallery-slider-next swiper-button-next">
 									<svg class="carousel__slider__arrow-right" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 										<use xlink:href="#icon-arrow-right"></use>
 									</svg>
@@ -361,7 +361,47 @@
 			</div>
 		</section>
 
-		<section class="testimonials"></section>
+		<section class="testimonials">
+			<div class="testimonial-slider">
+				<div class="testimonial-slider__container container">
+					<div class="testimonial-slider__track js-testimonial-slider swiper-container">
+
+						<svg class="testimonial-slider__quote" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<use xlink:href="#icon-quotes"></use>
+						</svg>
+
+						<div class="testimonial-slider__items swiper-wrapper">
+
+							<div class="testimonial-slider__item swiper-slide">
+								<div class="testimonial-slider__item__wrap">
+									<img class="testimonial-slider__item__logo" src="./img/iMore.png" alt="iMore logo">
+									<p class="testimonial-slider__item__copy">The DUO combines an extremely compact turntable with a detachable Bluetooth speaker for a minuscule setup that's unlike nearly every other record player on the market.</p>
+								</div>
+							</div>
+
+							<div class="testimonial-slider__item swiper-slide">
+								<div class="testimonial-slider__item__wrap">
+									<img class="testimonial-slider__item__logo" src="./img/ubergizmo.png" alt="Ubergizmo logo">
+									<p class="testimonial-slider__item__copy">The best part is that the DUO is a complete package, meaning that you will be able to start playing it right out of the box, thanks the fact that it comes with a detachable Bluetooth speaker.</p>
+								</div>
+							</div>
+
+							<div class="testimonial-slider__item swiper-slide">
+								<div class="testimonial-slider__item__wrap">
+									<img class="testimonial-slider__item__logo" src="./img/nownews.png" alt="NOWnews logo">
+									<p class="testimonial-slider__item__copy">After listening to the product on the spot, I found that DUO os indeed a very good product. It solves all kinds of pain points for young people when they have difficulty in getting into the product, and also meets the needs of playing wireless bluetooth music.</p>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="testimonial-slider__pagination js-testimonial-slider-pagination swiper-pagination"></div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="models"></section>
 		<section class="subscription"></section>
 	</main>

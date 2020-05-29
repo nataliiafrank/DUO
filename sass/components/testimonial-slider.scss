@@ -1,0 +1,125 @@
+// .testimonial-slider
+@include block('testimonial-slider') {
+
+	// .testimonial-slider__container
+	@include element('container') {
+		padding: 104px 0;
+
+		@include mq('md') {
+			padding: 170px 0 200px;
+		}
+	}
+
+	// .testimonial-slider__track
+	@include element('track') {
+		padding-bottom: 35px;
+
+		@include mq('md') {
+			padding-bottom: 55px;
+		}
+	}
+
+	// .testimonial-slider__items
+	@include element('items') {}
+
+	// .testimonial-slider__item
+	@include element('item') {
+
+		// .testimonial-slider__item__wrap
+		@include child('wrap') {
+			margin: 0 auto;
+			max-width: calc(100% - 54px);
+
+			@include mq('md') {
+				max-width: 573px;
+			}
+		}
+
+		// .testimonial-slider__item__logo
+		@include child('logo') {
+			margin-top: 10px;
+			max-height: 28px;
+			max-width: 100%;
+
+			@include mq('md') {
+				margin-top: 35px;
+				max-height: 45px;
+			}
+
+			@include mq('lg') {
+				margin-top: 10px;
+			}
+		}
+
+		// .testimonial-slider__item__copy
+		@include child('copy') {
+			padding-top: 16px;
+			font-size: 20px;
+			line-height: 30px;
+
+			@include mq('md') {
+				padding-top: 30px;
+			}
+		}
+	}
+
+	// .testimonial-slider__pagination
+	@include element('pagination') {
+		bottom: 0;
+	}
+
+	// .testimonial-slider__quote
+	@include element('quote') {
+		fill: $c-alabaster;
+		height: 87px;
+		margin-right: 27px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 104px;
+		z-index: -1;
+
+		@include mq('md') {
+			height: 187px;
+			margin-right: calc((100% - 590px) / 2);
+			width: 225px;
+		}
+
+		@include mq('lg') {
+			height: 238px;
+			width: 288px;
+		}
+	}
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal>.swiper-pagination-bullets {
+	bottom: 0;
+	margin-left: 27px;
+	width: auto;
+
+	@include mq('md') {
+		margin-left: calc((100% - 573px) / 2);
+	}
+
+	.swiper-pagination-bullet {
+		height: 6px;
+		margin: 0;
+		margin-right: 26px;
+		width: 6px;
+
+		&:focus {
+			outline-color: transparent;
+		}
+	}
+}
+
+.swiper-pagination-bullet {
+	background-color: rgba($c-duo-orange, 0.6);
+	border-radius: 0;
+
+	&.swiper-pagination-bullet-active {
+		background-color: $c-duo-orange;
+	}
+}
