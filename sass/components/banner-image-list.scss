@@ -94,9 +94,11 @@
 	// .banner-image-list__item
 	@include element('item') {
 		width: calc(200 / 320 * 100%);
+		max-width: 250px;
 
 		@include mq('md') {
 			width: calc(200 / 698 * 100%);
+			max-width: auto;
 		}
 
 		@include mq('lg') {

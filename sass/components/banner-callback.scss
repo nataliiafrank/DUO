@@ -1,0 +1,128 @@
+// .banner-callback
+@include block('banner-callback') {
+	// .banner-callback__container
+	@include element('container') {
+		@extend %padding-both;
+		padding-bottom: 104px;
+		padding-top: 104px;
+
+		@include mq('md') {
+			padding-bottom: 115px;
+			padding-top: 120px;
+		}
+
+		@include mq('lg') {
+			padding-bottom: 160px;
+			padding-top: 140px;
+		}
+	}
+
+	// .banner-callback__left
+	@include element('left') {
+		@include mq('lg') {
+			padding-right: calc(128 / 1200 * 100%);
+		}
+	}
+
+	// .banner-callback__right
+	@include element('right') {
+		@include mq('lg') {
+			padding-left: 10px;
+		}
+	}
+
+	// .banner-callback__heading
+	@include element('heading') {
+		@extend .typography-heading--1;
+
+		@include mq('md') {
+			font-size: 4.5rem;
+			line-height: 50px;
+		}
+
+		@include mq('lg') {
+			padding-top: 18px;
+		}
+	}
+
+	// .banner-callback__subheading
+	@include element('subheading') {
+		@extend .typography-subheading;
+		padding-top: 32px;
+	}
+
+	// .banner-callback__copy
+	@include element('copy') {
+		padding-top: 30px;
+	}
+
+	// .banner-callback__callback
+	@include element('callback') {
+		margin-top: 40px;
+		position: relative;
+
+		@include mq('md') {
+			margin-top: 75px;
+		}
+
+		@include mq('lg') {
+			max-width: 480px;
+		}
+	}
+
+	// .banner-callback__input
+	@include element('input') {
+		background-color: $c-alabaster;
+		border: 0;
+		line-height: 1;
+		color: rgba($c-cod-gray, 0.54);
+		display: block;
+		padding: 25px 15px;
+		width: 100%;
+
+		@include mq('md') {
+			padding-right: 225px;
+		}
+
+		&:focus,
+		&:active {
+			border-radius: 0;
+			outline-color: $c-alto;
+		}
+
+		@include state('disabled') {
+			outline-color: $c-duo-orange;
+
+			&:focus,
+			&:active {
+				outline-color: $c-duo-orange;
+			}
+		}
+
+		&::placeholder {
+			color: rgba($c-cod-gray, 0.54);
+		}
+	}
+
+	// .banner-callback__button
+	@include element('button') {
+		font-size: 16px;
+		margin-top: 15px;
+		width: 100%;
+
+		@include mq('md') {
+			margin-right: 15px;
+			margin-top: 6px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 195px;
+			z-index: 1;
+		}
+	}
+
+	// .banner-callback__image
+	@include element('image') {
+		max-width: 100%;
+	}
+}

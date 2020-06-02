@@ -4,45 +4,74 @@
 
 	// .footer__container
 	@include element('container') {
-		padding: 40px 0 60px;
+		@extend %padding-both;
+		padding-top: 40px;
+		padding-bottom: 60px;
+
+		@include mq('md') {
+			align-items: center;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			padding-bottom: 80px;
+			padding-top: 78px;
+		}
 	}
 
 	// .footer__logo
 	@include element('logo') {
 		height: 46px;
-		overflow: hidden;
 		margin: 0 auto;
+		overflow: hidden;
 		width: 79px;
+
+		@include mq('md') {
+			flex: 0 0 auto;
+			margin: 0;
+		}
 	}
 
 	// .footer__logo-img
 	@include element('logo-img') {
+		fill: $c-cod-gray;
 		height: 46px;
 		max-width: 100%;
 		width: 100%;
-	}
-
-	// .footer__nav
-	@include element('nav') {
 	}
 
 	//. footer__items
 	@include element('items') {
 		display: flex;
 		flex-flow: row wrap;
+
+		@include mq('md') {
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
 	}
 
 	//. footer__item
 	@include element('item') {
 		display: inline-block;
+		flex: 0 0 100%;
+		padding-top: 36px;
 		text-align: center;
 		width: 100%;
-		padding-top: 36px;
-		flex: 0 0 100%;
+
+		@include mq('md') {
+			flex: 1 1 auto;
+			padding-left: 65px;
+			padding-top: 0;
+		}
 	}
 
 	//. footer__link
 	@include element('link') {
+		color: $c-boulder;
 		text-align: center;
+
+		@include mq('md', $type: 'max') {
+			font-size: 20px;
+		}
 	}
 }
