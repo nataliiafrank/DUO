@@ -50,8 +50,8 @@ const featuresScroll = () => {
 
 // SLIDER
 // initialising swiper instance
-const createSliderInstance = (container, options) => {
-	if (!container) {
+const createSliderInstance = (container, options, breakpoint) => {
+	if (!container || (breakpoint && breakpoint.matches)) {
 		return null;
 	}
 
@@ -108,7 +108,7 @@ const createBreakpoint = (breakpoint) => window.matchMedia(`(min-width:${breakpo
 const startSlider = (sliderCreater, shouldDestroy, breakpoint) => {
 	let sliderInstance = sliderCreater();
 
-	if (!sliderInstance || !shouldDestroy) {
+	if (!shouldDestroy) {
 		return;
 	}
 
@@ -132,7 +132,7 @@ startSlider(createGallerySlider, false);
 const createTestimonialSlider = () => createSliderInstance(domSelectors.testimonialSwiperContainer, testimonialSliderOptions);
 startSlider(createTestimonialSlider, false);
 
-const createModelSlider = () => createSliderInstance(domSelectors.modelsSwiperContainer, modelsSliderOptions);
+const createModelSlider = () => createSliderInstance(domSelectors.modelsSwiperContainer, modelsSliderOptions, createBreakpoint(bp.tablet));
 startSlider(createModelSlider, true, createBreakpoint(bp.tablet));
 
 
