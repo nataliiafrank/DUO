@@ -1,0 +1,139 @@
+// .banner-image-list
+@include block('banner-image-list') {
+
+	// .banner-image-list__container
+	@include element('container') {
+		@extend %bg-grey;
+		padding-bottom: 60px;
+		padding-top: 40px;
+		position: relative;
+
+		@include mq('md') {
+			padding-bottom: 80px;
+			padding-top: 80px;
+		}
+
+		@include mq('lg') {
+			background-color: $c-white;
+			padding-bottom: 127px;
+			padding-top: 60px;
+		}
+
+		&::before {
+			@include pseudo;
+
+			@include mq('lg') {
+				background-color: $c-alabaster;
+				height: 100%;
+				left: 0;
+				top: 0;
+				width: calc(786 / 1400 * 100%);
+			}
+		}
+	}
+
+	// .banner-image-list__header
+	@include element('header') {
+		@extend %padding-both;
+		padding-bottom: 40px;
+		position: relative;
+		z-index: 1;
+
+		@include mq('md') {
+			padding-bottom: 50px;
+		}
+	}
+
+	// .banner-image-list__heading
+	@include element('heading') {
+		@extend .typography-heading--2;
+		padding-right: 20px;
+
+		@include mq('md') {
+			max-width: 320px;
+			padding-right: 0;
+		}
+	}
+
+	// .banner-image-list__copy
+	@include element('copy') {
+		padding-right: 10px;
+		padding-top: 25px;
+
+		@include mq('md') {
+			max-width: 505px;
+			padding-right: 0;
+		}
+	}
+
+	// .banner-image-list__images
+	@include element('images') {
+
+		@include mq('md') {
+			@include mq('lg', $type: 'max') {
+				padding-left: calc(35 / 768 * 100%);
+				padding-right: calc(35 / 768 * 100%);
+			}
+		}
+	}
+
+	// .banner-image-list__items
+	@include element('items') {
+		@include mq('md') {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			overflow-x: scroll;
+		}
+
+		@include mq('lg') {
+			justify-content: flex-end;
+		}
+	}
+
+	// .banner-image-list__item
+	@include element('item') {
+		width: calc(200 / 320 * 100%);
+
+		@include mq('md') {
+			width: calc(200 / 698 * 100%);
+		}
+
+		@include mq('lg') {
+			margin-left: 37px;
+			width: calc(307 / 1400 * 100%);
+		}
+
+		// .banner-image-list__item__copy
+		@include child('copy') {
+			line-height: 20px;
+			margin-top: 15px;
+			padding-left: 18px;
+			position: relative;
+
+			&::before {
+				@include pseudo;
+				@extend %bg-red;
+				bottom: 0;
+				height: 8px;
+				left: 0;
+				margin-bottom: 4px;
+				width: 8px;
+			}
+		}
+	}
+
+	// .banner-image-list__image-wrap
+	@include element('image-wrap') {
+		@include responsive-img(200, 242);
+
+		@include mq('lg') {
+			@include responsive-img(307, 371);
+		}
+	}
+
+	// .banner-image-list__image
+	@include element('image') {
+		max-width: 100%;
+	}
+}

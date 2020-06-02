@@ -25,10 +25,12 @@ const domSelectors = {
 	gallerySwiperButtonRight: document.querySelector('.js-gallery-slider-next'),
 	testimonialSwiperContainer: document.querySelector('.js-testimonial-slider'),
 	testimonialSwiperPagination: document.querySelector('.js-testimonial-slider-pagination'),
+	modelsSwiperContainer: document.querySelector('.js-models-slider'),
 }
 
 
 /// Functions
+// FEATURES
 const featuresScroll = () => {
 	const btnsArr = Array.from(domSelectors.featuresButton);
 
@@ -46,10 +48,18 @@ const featuresScroll = () => {
 	});
 }
 
-const sliderInit = (container, options) => new Swiper(container, options);
+// SLIDER
+// initialising swiper instance
+const createSliderInstance = (container, options) => {
+	if (!container) {
+		return null;
+	}
 
+	return new Swiper(container, options);
+}
+
+// define slider options
 const gallerySliderOptions = {
-	speed: 400,
 	initialSlide: 1,
 	slidesPerView: 'auto',
 	spaceBetween: 15,
@@ -72,7 +82,6 @@ const gallerySliderOptions = {
 }
 
 const testimonialSliderOptions = {
-	speed: 400,
 	slidesPerView: 1,
 	centeredSlides: true,
 	loop: true,
@@ -84,8 +93,48 @@ const testimonialSliderOptions = {
 	},
 }
 
-const gallerySlider = sliderInit(domSelectors.gallerySwiperContainer, gallerySliderOptions);
-const testimonialSlider = sliderInit(domSelectors.testimonialSwiperContainer, testimonialSliderOptions);
+const modelsSliderOptions = {
+	slidesPerView: 'auto',
+	spaceBetween: 15,
+	centeredSlides: true,
+	loop: true,
+	centeredSlidesBounds: true
+}
+
+// breakpoint where swiper will be destroyed
+const createBreakpoint = (breakpoint) => window.matchMedia(`(min-width:${breakpoint}px)`);
+
+// handle resize
+const startSlider = (sliderCreater, shouldDestroy, breakpoint) => {
+	let sliderInstance = sliderCreater();
+
+	if (!sliderInstance || !shouldDestroy) {
+		return;
+	}
+
+	breakpoint.addListener(() => {
+		if (breakpoint.matches) {
+			if (!sliderInstance) {
+				return;
+			}
+
+			sliderInstance.destroy(true, true);
+		} else {
+			sliderInstance = sliderCreater();
+		}
+	});
+};
+
+// functins for creating and starting slider instances
+const createGallerySlider = () => createSliderInstance(domSelectors.gallerySwiperContainer, gallerySliderOptions);
+startSlider(createGallerySlider, false);
+
+const createTestimonialSlider = () => createSliderInstance(domSelectors.testimonialSwiperContainer, testimonialSliderOptions);
+startSlider(createTestimonialSlider, false);
+
+const createModelSlider = () => createSliderInstance(domSelectors.modelsSwiperContainer, modelsSliderOptions);
+startSlider(createModelSlider, true, createBreakpoint(bp.tablet));
+
 
 /// Event Listeners
 // Features
