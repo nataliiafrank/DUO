@@ -438,7 +438,7 @@
 			</dev>
 		</section>
 
-		<section class="subscription">
+		<section class="callback-form">
 			<div class="banner-callback">
 				<div class="banner-callback__container container row">
 
@@ -461,10 +461,10 @@
 							<p>Just give us your phone number and we'll call you back.</p>
 						</div>
 
-						<div class="banner-callback__callback">
-							<form class="banner-callback__from" action="post">
-								<input class="banner-callback__input" type="tel" placeholder="Phone number">
-								<button class="banner-callback__button button">send</button>
+						<div class="banner-callback__callback js-form-container">
+							<form class="banner-callback__form js-form" action="#">
+								<input class="banner-callback__form__input js-form-input-phone" id="callback-phone" type="tel" placeholder="Phone number" required>
+								<button class="banner-callback__form__button button js-form-submit">send</button>
 							</form>
 						</div>
 					</div>

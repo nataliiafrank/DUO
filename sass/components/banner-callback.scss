@@ -70,55 +70,93 @@
 		}
 	}
 
-	// .banner-callback__input
-	@include element('input') {
-		background-color: $c-alabaster;
-		border: 0;
-		line-height: 1;
-		color: rgba($c-cod-gray, 0.54);
-		display: block;
-		padding: 25px 15px;
-		width: 100%;
+	// .banner-callback__form
+	@include element('form') {
 
-		@include mq('md') {
-			padding-right: 225px;
-		}
+		// .banner-callback__form__input
+		@include child('input') {
+			background-color: $c-alabaster;
+			border: 0;
+			line-height: 1;
+			color: rgba($c-cod-gray, 0.54);
+			display: block;
+			padding: 25px 15px;
+			width: 100%;
 
-		&:focus,
-		&:active {
-			border-radius: 0;
-			outline-color: $c-alto;
-		}
-
-		@include state('disabled') {
-			outline-color: $c-duo-orange;
+			@include mq('md') {
+				padding-right: 225px;
+			}
 
 			&:focus,
 			&:active {
+				border-radius: 0;
+				outline-color: $c-alto;
+			}
+
+			@include state('disabled') {
 				outline-color: $c-duo-orange;
+
+				&:focus,
+				&:active {
+					outline-color: $c-duo-orange;
+				}
+			}
+
+			&::placeholder {
+				color: rgba($c-cod-gray, 0.54);
 			}
 		}
 
-		&::placeholder {
-			color: rgba($c-cod-gray, 0.54);
+		// .banner-callback__form__button
+		@include child('button') {
+			font-size: 16px;
+			margin-top: 15px;
+			width: 100%;
+
+			@include mq('md') {
+				margin-right: 15px;
+				margin-bottom: 6px;
+				margin-top: 0;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 195px;
+				z-index: 1;
+			}
+		}
+
+		// .banner-callback__form .is-valid
+		@include state('valid') {
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		// .banner-callback__form .is-invalid
+		@include state('invalid') {
+			.banner-callback__form__input {
+				outline-color: $c-duo-orange;
+			}
 		}
 	}
 
-	// .banner-callback__button
-	@include element('button') {
-		font-size: 16px;
-		margin-top: 15px;
-		width: 100%;
+	// .banner-callback__error
+	@include element('error') {
+		animation: 0.25 ease-in-out fade-in;
+		color: $c-duo-orange;
+		display: block;
+		font-size: 12px;
+		line-height: 16px;
+		padding-bottom: 8px;
+	}
 
-		@include mq('md') {
-			margin-right: 15px;
-			margin-top: 6px;
-			position: absolute;
-			right: 0;
-			top: 0;
-			width: 195px;
-			z-index: 1;
-		}
+	// .banner-callback__thanks
+	@include element('thanks') {
+		@extend .typography-subheading;
+		animation: 2s ease-in-out fade-in;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
 	}
 
 	// .banner-callback__image
