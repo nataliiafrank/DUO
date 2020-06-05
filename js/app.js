@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import Features from '../features.json';
 
 // Defining global veriables
 const bp = {
@@ -50,6 +51,34 @@ const featuresScroll = () => {
 			} else {
 				domSelectors.featuresButtons.scrollLeft = 0;
 			}
+		}
+	});
+}
+
+const populateFeatures = (e) => {
+	const title = document.querySelector('.js-features-heading');
+	const text = document.querySelector('.js-features-copy');
+
+	// get current button
+	const currentButton = e.target.closest('.js-features-button');
+
+	if(currentButton == null ) {
+		return;
+	}
+
+	// remove active class from all the buttons
+	domSelectors.featuresButton.forEach((button) => button.classList.remove(state.active));
+
+	const currentVal = currentButton.dataset.feature;
+	const features = Features;
+	const keys = Object.keys(features);
+
+	// populate heading and copy
+	keys.map((key) => {
+		if(currentVal == key) {
+			currentButton.classList.add(state.active);
+			title.textContent = features[key].title;
+			text.textContent = features[key].copy;
 		}
 	});
 }
@@ -191,3 +220,4 @@ const handleFormValid = (e) => {
 window.addEventListener('load', featuresScroll);
 window.addEventListener('resize', featuresScroll);
 domSelectors.formSubmit.addEventListener('click', handleFormValid);
+domSelectors.featuresButtons.addEventListener('click', populateFeatures);

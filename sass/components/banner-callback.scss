@@ -123,6 +123,11 @@
 				width: 195px;
 				z-index: 1;
 			}
+
+			@include mq('lg') {
+				padding: 15px 0;
+				width: 86px;
+			}
 		}
 
 		// .banner-callback__form .is-valid

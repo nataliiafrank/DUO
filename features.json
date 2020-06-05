@@ -1,0 +1,34 @@
+{
+	"alexa": {
+		"title": "Alexa Smart Voice Control",
+		"copy": "Feel like ordering a pizza between podcasts? DUO’s built-in Amazon Alexa functionality gives you vocal control of your music while connected via Bluetooth. As you know, Alexa offers a wide range of functions, so it’s more than just changing music tracks."
+	},
+	"group": {
+		"title": "Offering both vinyl and bluetooth",
+		"copy": "Not in the mood for vinyl? Switch to streaming. Whether it’s your favorite record or playlist, DUO uses aptX Bluetooth to boost audio quality so you can blast your favorite music however you feel like!"
+	},
+	"bluetooth": {
+		"title": "AptX Bluetooth to boost audio quality",
+		"copy": "Don’t let them tell you Bluetooth speakers are incompatible with quality sound. DUO uses the Qualcomm CSR8670 chip and aptX Bluetooth protocol to create lossless sound dispersion with a flat frequency response. You will never look at Bluetooth speakers the same way again."
+	},
+	"record": {
+		"title": "3.2” (80 mm) diameter turntable",
+		"copy": "DUO’s compact 3.2” (80 mm) diameter platter is only 1/4 the size of a standard turntable. Its deceleration belt design and unique rotational stabilization help minimize vibrations on the record."
+	},
+	"one": {
+		"title": "All-in-one Compact Setup",
+		"copy": "DUO challenges the technical limitations of the past to integrate a phono amplifier and a power amplifier in an ultra-compact setup. No additional amplifiers required. Vinyl or streaming, DUO’s got you covered."
+	},
+	"smartphone": {
+		"title": "Compatible with any bluetooth device",
+		"copy": "DUO’s portable Bluetooth speaker works even without the turntable."
+	},
+	"clock": {
+		"title": "10 hours of playtime",
+		"copy": "With a full charge, DUO gives you 10 hours of playtime, so it won’t die on you while you party (unless you’re one of those “24-Hour Party” people). Of course, you can bring more than just the speaker with you. If you want to take the turntable to your dance practice, we won’t stop you."
+	},
+	"stereo": {
+		"title": "Stereo Channels for Vivid Sound",
+		"copy": "DUO supports True Wireless Stereo Bluetooth connection and gives you a stereophonic option – with no effort on your part. When you get 2 DUO speakers, press the Bluetooth buttons at the same time. DUO will automatically configure them into left and right channels to make your music come to life in wall-to-wall sound. Sometimes laziness does pay off!"
+	}
+}
