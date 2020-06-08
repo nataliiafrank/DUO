@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nataliiafrank/DUO#readme",
   "dependencies": {
+    "micromodal": "^0.4.6",
     "swiper": "^5.4.1"
   },
   "devDependencies": {

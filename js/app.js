@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import Features from '../features.json';
+import MicroModal from 'micromodal';
 
 // Defining global veriables
 const bp = {
@@ -214,9 +215,24 @@ const handleFormValid = (e) => {
 	}
 }
 
+// Video
+const stopVideo = (modal) => {
+	const video = modal.querySelector('iframe[src*="www.youtube.com"]');
+
+	// Return if the modal doesn't have a video
+	if (!video) return;
+
+	// Stop the video on modal close
+	video.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+}
+
+// MODAL
+MicroModal.init({
+  onClose: () => stopVideo(document.querySelector("#streaming-modal"))
+});
+
 
 /// Event Listeners
-// Features
 window.addEventListener('load', featuresScroll);
 window.addEventListener('resize', featuresScroll);
 domSelectors.formSubmit.addEventListener('click', handleFormValid);
