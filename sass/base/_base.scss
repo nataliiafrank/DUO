@@ -89,7 +89,8 @@ a,button,[role='button'] {
   transition: $transition * 0.25 ease;
 
 	// accesibility
-  &:focus {
+	&:focus,
+	&:active {
     outline: 1px dashed $c-duo-orange;
   }
 }

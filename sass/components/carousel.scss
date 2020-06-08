@@ -140,7 +140,8 @@
 				width: 106px;
 			}
 
-			&:focus {
+			&:focus,
+			&:active {
 				outline-color: $c-white;
 			}
 		}

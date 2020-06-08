@@ -11,7 +11,7 @@
 
 .button-link {
 	color: $c-duo-orange;
-	cursor: pointer;
+	// cursor: pointer;
 	padding: 10px 17px 12px;
 	position: relative;
 
@@ -43,7 +43,8 @@
 	width: 100%;
 	height: 100%;
 
-	&:focus {
+	&:focus,
+	&:active {
 		outline: 1px dashed $c-white;
 	}
 
@@ -97,7 +98,8 @@
   max-height: 100vh;
   max-width: 100%;
   overflow-y: auto;
-  padding: 30px 0;
+	padding: 30px 0;
+	position: relative;
 }
 
 .modal__header {
@@ -110,12 +112,14 @@
 	border: 0;
 	color: $c-white;
 	display: block;
+	height: 20px;
 	left: 0;
-	margin-left: 15px;
-	margin-top: 15px;
+	margin-left: 10px;
+	margin-top: 5px;
 	position: absolute;
 	top: 0;
-  background: transparent;
+	background: transparent;
+	width: 20px;
 }
 
 .modal__header .modal__close:before {

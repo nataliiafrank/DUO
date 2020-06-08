@@ -98,7 +98,7 @@
 		}
 
 		@include state('active') {
-			animation: fade-in $transition * 2 ease;
+			// animation: fade-in $transition * 2 ease;
 			background: $c-duo-orange;
 		}
 	}
