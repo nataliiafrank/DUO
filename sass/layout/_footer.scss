@@ -36,7 +36,12 @@
 		fill: $c-cod-gray;
 		height: 46px;
 		max-width: 100%;
+		transition: $transition * 0.75 ease-in-out;
 		width: 100%;
+
+		&:hover {
+			fill: $c-cod-gray-light;
+		}
 	}
 
 	//. footer__items
@@ -69,9 +74,14 @@
 	@include element('link') {
 		color: $c-boulder;
 		text-align: center;
+		transition: 0.25s;
 
 		@include mq('md', $type: 'max') {
 			font-size: 20px;
+		}
+
+		&:hover {
+			color: $c-alto;
 		}
 	}
 }

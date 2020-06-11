@@ -23,9 +23,15 @@
 
 	// .header__logo-img
 	@include element('logo-img') {
+		fill: $c-gondola;
 		height: 46px;
 		max-width: 100%;
+		transition: $transition * .75 ease-in-out;
 		width: 100%;
+
+		&:hover {
+			fill: $c-cod-gray-light;
+		}
 	}
 
 	// .header__nav

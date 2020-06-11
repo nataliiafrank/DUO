@@ -1,12 +1,23 @@
 .button {
 	@extend .typography-body--sm;
+	background-color: $c-duo-orange;
 	color: $c-white;
 	padding: 15px 38px;
-	background-color: $c-duo-orange;
+	transition: background-color $transition * .75 ease;
+
+	&:hover {
+		background-color: rgba($c-duo-orange, .5);
+	}
 }
 
 .link {
 	@extend .typography-body--sm;
+	color: $c-cod-gray;
+	transition: $transition * .75 ease;
+
+	&:hover {
+		color: $c-cod-gray-light;
+	}
 }
 
 .button-link {
@@ -26,7 +37,7 @@
 		top: 0;
 		width: 84px;
 		z-index: -1;
-		transition: 0.3s ease-in-out;
+		transition: $transition * .75 ease-in;
 	}
 
 	&:hover {
@@ -39,13 +50,17 @@
 .play-button {
 	background-color: $c-white;
 	border-radius: 100%;
-	// set with and height in the component
-	width: 100%;
 	height: 100%;
+	transition: background-color $transition * .75 ease-in;
+	width: 100%;
 
 	&:focus,
 	&:active {
 		outline: 1px dashed $c-white;
+	}
+
+	&:hover {
+		background-color: rgba($c-white, .5);
 	}
 
 	&::before {
@@ -82,7 +97,7 @@
 .modal__overlay {
 	align-items: center;
 	z-index: 99;
-  background: rgba($c-black, .6);
+  background-color: rgba($c-black, .6);
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -118,7 +133,7 @@
 	margin-top: 5px;
 	position: absolute;
 	top: 0;
-	background: transparent;
+	background-color: transparent;
 	width: 20px;
 }
 

@@ -78,10 +78,11 @@
 
 	// .features__button
 	@include element('button') {
-		background: $c-concrete;
+		background-color: rgba($c-concrete, 1);
 		display: inline-block;
 		height: 73px;
 		margin-right: 2px;
+		transition: background-color $transition * .5 ease;
 		width: 73px;
 
 		@include mq('md', $type: 'max') {
@@ -97,9 +98,13 @@
 			margin: 2px;
 		}
 
+		&:hover {
+			background-color: rgba($c-concrete, .5);
+		}
+
 		@include state('active') {
 			// animation: fade-in $transition * 2 ease;
-			background: $c-duo-orange;
+			background-color: $c-duo-orange;
 		}
 	}
 

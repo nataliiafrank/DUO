@@ -128,21 +128,33 @@
 			height: 36px;
 			display: inline-block;
 			margin-top: 0;
+			transition: $transition * .75 ease-in-out;
 
 			// .carousel__slider__button--prev
 			@include modifier('prev') {
 				width: 52px;
+
+				&:hover {
+					background-color: $c-duo-orange;
+
+					.carousel__slider__arrow-left {
+						fill: $c-white;
+					}
+				}
 			}
 
 			// .carousel__slider__button--next
 			@include modifier('next') {
 				background-color: $c-duo-orange;
 				width: 106px;
-			}
 
-			&:focus,
-			&:active {
-				outline-color: $c-white;
+				&:hover {
+					background-color: $c-white;
+
+					.carousel__slider__arrow-right {
+						fill: $c-duo-orange;
+					}
+				}
 			}
 		}
 
@@ -151,6 +163,7 @@
 			fill: $c-duo-orange;
 			height: 12px;
 			width: 22px;
+			transition: $transition * .75 ease-in-out;
 		}
 
 		// .carousel__slider__arrow-right
@@ -158,6 +171,7 @@
 			fill: $c-white;
 			height: 12px;
 			width: 42px;
+			transition: $transition * .75 ease-in-out;
 		}
 	}
 }
