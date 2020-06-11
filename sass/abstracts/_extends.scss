@@ -9,8 +9,8 @@
 	}
 
 	@include mq('lg') {
-		padding-left: calc(100 / 1400 * 100%);
-		padding-right: calc(100 / 1400 * 100%);
+		padding-left: calc(100 / 1440 * 100%);
+		padding-right: calc(100 / 1440 * 100%);
 	}
 
 	@include mq('xxl') {
@@ -28,7 +28,7 @@
 	}
 
 	@include mq('lg') {
-		padding-left: calc(100 / 1400 * 100%);
+		padding-left: calc(100 / 1440 * 100%);
 	}
 
 	@include mq('xxl') {
@@ -45,7 +45,7 @@
 	}
 
 	@include mq('lg') {
-		padding-right: calc(100 / 1400 * 100%);
+		padding-right: calc(100 / 1440 * 100%);
 	}
 
 	@include mq('xxl') {

@@ -1,9 +1,5 @@
 // .carousel
 @include block('carousel') {
-	// .carousel__container
-	@include element('container'){
-	}
-
 	// .carousel__intro
 	@include element('intro'){
 		@extend %bg-grey;
@@ -21,7 +17,7 @@
 		@include mq('lg') {
 			padding-bottom: 190px;
 			padding-top: 129px;
-			padding-right: calc(112 / 1400 * 100%);
+			padding-right: calc(112 / 1440 * 100%);
 		}
 	}
 
@@ -39,7 +35,7 @@
 		padding-top: 24px;
 
 		@include mq('lg') {
-			padding-left: calc(100 / 1188 * 100%);
+			padding-left: calc(125 / 1228 * 100%);
 			padding-top: 8px;
 		}
 	}
@@ -56,10 +52,6 @@
 			margin-top: -92px;
 		}
 
-		// .carousel__slider__items
-		@include child('items') {
-		}
-
 		// .carousel__slider__item
 		@include child('item') {
 			&:nth-child(3n + 1) {
@@ -71,21 +63,17 @@
 			}
 
 			&:nth-child(3n + 2) {
-				// @include responsive-img(254, 169);
 				width: 254px;
 
 				@include mq('md') {
-					// @include responsive-img(440, 293);
 					width: 440px;
 				}
 			}
 
 			&:nth-child(3n + 3) {
-				// @include responsive-img(308, 206);
 				width: 308px;
 
 				@include mq('md') {
-					// @include responsive-img(574, 383);
 					width: 574px;
 				}
 			}
@@ -114,10 +102,10 @@
 				margin-right: 80px;
 			}
 
-			@include mq('md') {
+			@include mq('lg') {
 				margin-top: 76px;
 				margin-right: auto;
-				margin-left: calc(100 / 1400 * 100%);
+				margin-left: calc(100 / 1440 * 100%);
 			}
 		}
 
@@ -135,10 +123,12 @@
 				width: 52px;
 
 				&:hover {
-					background-color: $c-duo-orange;
+					@include mq('lg') {
+						background-color: $c-duo-orange;
 
-					.carousel__slider__arrow-left {
-						fill: $c-white;
+						.carousel__slider__arrow-left {
+							fill: $c-white;
+						}
 					}
 				}
 			}
@@ -148,11 +138,22 @@
 				background-color: $c-duo-orange;
 				width: 106px;
 
-				&:hover {
-					background-color: $c-white;
+				&:focus,
+				&:active {
+					outline-color: $c-white;
 
-					.carousel__slider__arrow-right {
-						fill: $c-duo-orange;
+					@include mq('lg') {
+						outline-color: transparent;
+					}
+				}
+
+				&:hover {
+					@include mq('lg') {
+						background-color: $c-white;
+
+						.carousel__slider__arrow-right {
+							fill: $c-duo-orange;
+						}
 					}
 				}
 			}
@@ -173,20 +174,5 @@
 			width: 42px;
 			transition: $transition * .75 ease-in-out;
 		}
-	}
-}
-
-// Swiper overrides
-.swiper-button-prev {
-	&::after {
-		content: '';
-		display: none;
-	}
-}
-
-.swiper-button-next {
-	&::after {
-		content: '';
-		display: none;
 	}
 }

@@ -23,7 +23,7 @@
 
 		@include mq('lg') {
 			flex: 0 0 auto;
-			width: calc(714 / 1400 * 100%);
+			width: calc(735 / 1440 * 100%);
 		}
 	}
 
@@ -33,7 +33,7 @@
 
 		@include mq('lg') {
 			flex: 0 0 auto;
-			width: calc(686 / 1400 * 100%);
+			width: calc(705 / 1440 * 100%);
 		}
 	}
 }

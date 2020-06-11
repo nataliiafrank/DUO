@@ -86,11 +86,11 @@ button {
 a,button,[role='button'] {
 	cursor: pointer;
 	outline: 1px dashed transparent;
-  transition: $transition * 0.25 ease;
+	transition: $transition * 0.25 ease;
 
 	// accesibility
 	&:focus,
 	&:active {
-    outline: 1px dashed $c-duo-orange;
-  }
+		outline: 1px dashed $c-duo-orange;
+	}
 }

@@ -99,11 +99,12 @@
 		}
 
 		&:hover {
-			background-color: rgba($c-concrete, .5);
+			@include mq('lg') {
+				background-color: rgba($c-concrete, .5);
+			}
 		}
 
 		@include state('active') {
-			// animation: fade-in $transition * 2 ease;
 			background-color: $c-duo-orange;
 		}
 	}

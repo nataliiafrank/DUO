@@ -7,7 +7,7 @@ const bp = {
 	mobile: 320,
 	tablet: 768,
 	desktop: 1024,
-	largeDesctop: 1440
+	largeDesktop: 1440
 }
 
 const windowWidth = window.innerWidth;

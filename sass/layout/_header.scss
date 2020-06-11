@@ -30,7 +30,9 @@
 		width: 100%;
 
 		&:hover {
-			fill: $c-cod-gray-light;
+			@include mq('lg') {
+				fill: $c-cod-gray-light;
+			}
 		}
 	}
 

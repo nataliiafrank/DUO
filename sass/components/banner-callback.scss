@@ -24,13 +24,6 @@
 		}
 	}
 
-	// .banner-callback__right
-	@include element('right') {
-		@include mq('lg') {
-			padding-left: 10px;
-		}
-	}
-
 	// .banner-callback__heading
 	@include element('heading') {
 		@extend .typography-heading--1;

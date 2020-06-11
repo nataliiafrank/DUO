@@ -6,7 +6,9 @@
 	transition: background-color $transition * .75 ease;
 
 	&:hover {
-		background-color: rgba($c-duo-orange, .5);
+		@include mq('lg') {
+			background-color: rgba($c-duo-orange, .5);
+		}
 	}
 }
 
@@ -16,7 +18,9 @@
 	transition: $transition * .75 ease;
 
 	&:hover {
-		color: $c-cod-gray-light;
+		@include mq('lg') {
+			color: $c-cod-gray-light;
+		}
 	}
 }
 
@@ -60,7 +64,9 @@
 	}
 
 	&:hover {
-		background-color: rgba($c-white, .5);
+		@include mq('lg') {
+			background-color: rgba($c-white, .5);
+		}
 	}
 
 	&::before {
@@ -90,6 +96,21 @@
 		top: 50%;
 		transform: translate(-50%, -50%);
 		width: auto;
+	}
+}
+
+// Swiper overrides
+.swiper-button-prev {
+	&::after {
+		content: '';
+		display: none;
+	}
+}
+
+.swiper-button-next {
+	&::after {
+		content: '';
+		display: none;
 	}
 }
 

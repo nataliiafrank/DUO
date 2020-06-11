@@ -32,6 +32,11 @@
 				margin: 0 auto;
 				max-width: 370px;
 			}
+
+			@include mq('lg') {
+				margin: 0;
+				max-width: 450px;
+			}
 		}
 
 		// .banner-split__list__item
@@ -100,8 +105,8 @@
 		@include mq('lg') {
 			padding-bottom: 165px;
 			padding-top: 175px;
-			padding-left: calc(100 / 686 * 100%);
-			padding-right: calc(100 / 686 * 100%);
+			padding-left: calc(100 / 705 * 100%);
+			padding-right: calc(100 / 705 * 100%);
 		}
 	}
 
@@ -126,7 +131,7 @@
 
 		@include mq('lg') {
 			margin-bottom: 42px;
-			margin-left: calc(100 / 686 * 100% * -1);
+			margin-left: calc(100 / 705 * 100% * -1);
 		}
 
 		// .bunner-split__label__wrap
@@ -204,6 +209,7 @@
 					@include mq('lg') {
 						padding-bottom: 113px;
 						padding-top: 188px;
+						padding-left: calc(74 / 1440 * 100%);
 					}
 				}
 			}
@@ -211,6 +217,11 @@
 			&__heading {
 				@include mq('md') {
 					text-align: center;
+				}
+
+				@include mq('lg') {
+					text-align: left;
+					padding-left: 23px;
 				}
 			}
 
@@ -295,7 +306,7 @@
 				}
 
 				@include mq('lg') {
-					@include responsive-img(686, 482);
+					@include responsive-img(705, 482);
 				}
 			}
 
